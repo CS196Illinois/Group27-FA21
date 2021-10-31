@@ -1,0 +1,11 @@
+{% extends "website/base.html" %}
+{% block content %}
+<h1>HELLO WORLD</h1>
+<body>
+   <form action="/output/", method = 'post' id = 'passwordform'>
+      {% csrf_token %}
+      <input type="password" name = "password">
+      <button type="submit" form = "passwordform">Submit</button>
+   </form>
+</body>
+{% endblock content %}
