@@ -1,0 +1,12 @@
+{% extends "website/base.html" %}
+{% block content %}
+<h1>HELLO WORLD</h1>
+<body>
+   {% if list %}
+   {% for item in list %}
+   <h2>{{item.0}} and {{ item.1 }}</h2>
+
+   {% endfor %}
+   {% endif %}
+</body>
+{% endblock content %}

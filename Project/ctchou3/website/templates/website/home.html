@@ -1,0 +1,12 @@
+{% extends "website/base.html" %}
+{% block content %}
+<body>
+   <form action="/output/", method = 'post' id = 'passwordform'>
+      {% csrf_token %}
+      <input type="password" name = "password">
+      <button type="submit" form = "passwordform">Submit</button>
+   </form>
+
+   <a class = "logo" href = "{% url 'result' %}">Result</a>
+</body>
+{% endblock content %}
